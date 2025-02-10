@@ -11,7 +11,10 @@ name: build latexindent executables and documentation and upload to release page
 # Note: this action only runs on *each release*, i.e. when tags are pushed
 #
 
-on: workflow_dispatch
+on:
+  push:
+    tags:
+      - '*'
 
 jobs:
   #-------------------------------------------------------------------------
